@@ -1,0 +1,88 @@
+﻿@model Recipe
+
+@{
+    ViewBag.Title = "Edit Recipe";
+}
+
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div><img src="~/images/recipe_logo.png" width="50" /></div>
+        <div class="container">
+            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Fresh Table</a>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" asp-action="Index">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item active px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" asp-action="RecipeList">
+                            Recipe List
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" asp-action="CreateRecipe">Add Recipe</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+@if (TempData["message"] != null)
+{
+    <div class="alert alert-suceess mt-1">@TempData["message"]</div>
+}
+
+
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto box-bg">
+                <div class="box-style text-center rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-medium">Please write Recipe Information</span>
+                    </h2>
+                    <div class="panel panel-success">
+                        <div class="panel-body">
+                            <form asp-action="EditRecipe" method="post">
+                                <input type="hidden" asp-for="Id" />
+
+                                <div class="form-group">
+                                    <label asp-for="Name"></label>
+                                    <div><span asp-validation-for="Name" class="text-danger" /></div>
+                                    <input asp-for="Name" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Description"></label>
+                                    <div><span asp-validation-for="Description" class="text-danger" /></div>
+                                    <input asp-for="Description" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Ingredients"></label>
+                                    <div><span asp-validation-for="Ingredients" class="text-danger" /></div>
+                                    <input asp-for="Ingredients" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="PreparationTime"></label>
+                                    <div><span asp-validation-for="PreparationTime" class="text-danger" /></div>
+                                    <input asp-for="PreparationTime" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="CookingTime"></label>
+                                    <div><span asp-validation-for="CookingTime" class="text-danger" /></div>
+                                    <input asp-for="CookingTime" class="form-control" />
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-primary" type="submit">Save</button>
+                                    <button asp-action="Index" class="btn btn-secondary">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

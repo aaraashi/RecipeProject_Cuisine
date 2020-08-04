@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+    <div class="logo"><img src="~/images/recipe_logo.png" width="100" /></div>
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+        <span class="site-heading-upper text-primary mb-3">The most popular recipes here</span>
+        <span class="site-heading-lower">Fresh Table</span>
+    </h1>
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Fresh Table</a>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" asp-action="RecipeList">Recipe List</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" asp-action="CreateRecipe">Add Recipe</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-section cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center rounded">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">To Our</span>
+                            <span class="section-heading-lower">Cooking Lovers</span>
+                        </h2>
+
+                        <p class="mb-0">
+                            All recipes is the original and largest food-focused social network created for cooks by cooks; where everyone plays a part in helping cooks discover and share the joy of home cooking!
+                            If you have your own recipe, feel free to share your creativity!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+

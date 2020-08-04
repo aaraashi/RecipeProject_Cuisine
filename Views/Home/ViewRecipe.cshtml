@@ -1,0 +1,76 @@
+﻿@model Recipe
+ 
+@{
+    ViewBag.Title = "View Recipe";
+}
+
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div><img src="~/images/recipe_logo.png" width="50" /></div>
+        <div class="container">
+            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Fresh Table</a>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" asp-action="Index">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" asp-action="RecipeList">
+                            Recipe List
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" asp-action="CreateRecipe">Add Recipe</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-section cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center rounded">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">How to cook</span>
+                            <span class="section-heading-lower">@Model.Name</span>
+                        </h2>
+                        <div class="image" >
+                            <img src="~/images/french_onion_soup.jpg" />
+                        </div>
+                        <div>
+                            <table class="table text-left">
+                                <tbody>
+                                    <tr>
+                                        <td>Description</td>
+                                        <td colspan="2">@Model.Description</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ingredients</td>
+                                        <td>
+                                            @Model.Ingredients
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chef</td>
+                                        <td>@Model.Chef</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Preparation Time</td>
+                                        <td>@Model.PreparationTime Minutes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cooking Time</td>
+                                        <td>@Model.CookingTime Minutes</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

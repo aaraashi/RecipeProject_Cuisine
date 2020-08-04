@@ -1,0 +1,57 @@
+﻿@model Recipe
+
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto box-bg">
+                <div class="box-style text-center rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-medium">Please write Recipe Information</span>
+                    </h2>
+                    <div class="panel panel-success">
+                        <div class="panel-body">
+                            <form class="p-a-1" asp-action="CreateRecipe" method="Post">
+                                @*<div class="form-group">
+                                    <label asp-for="cuisine">Cuisine</label>
+                                    <select asp-for="cuisine.type"></select>
+                                </div>*@
+                                <div class="form-group">
+                                    <label asp-for="Name">Recipe Name</label>
+                                    <input class="form-control" asp-for="Name" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Description">Recipe Description</label>
+                                    <input class="form-control" asp-for="Description" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Ingredients">Ingredients</label>
+                                    <textarea name="ingredients" rows="2" class="form-control" asp-for="Ingredients"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Chef">Chef's Name</label>
+                                    <input class="form-control" asp-for="Chef" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="PreparationTime">Preparation Time</label>
+                                    <input class="form-control" asp-for="PreparationTime" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="CookingTime">Cooking Time</label>
+                                    <input class="form-control" asp-for="CookingTime" />
+                                </div>
+                                @*<div class="form-group">
+            <label asp-for="ImagePath">Image</label>
+            <input type="file" name="ImageFile" required />
+        </div>*@
+                                @* modify button's layout *@
+                                <div class="text-center">
+                                    <button class="btn btn-primary add-button" type="submit">Add Recipe</button>  <button class="btn badge-danger" asp-action="Index">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
