@@ -1,4 +1,4 @@
-﻿@model Recipe
+﻿@model RecipesProject_JuheeKim.ViewModels.RecipeCuisionViewModel
  
 @{
     ViewBag.Title = "View Recipe";
@@ -36,7 +36,7 @@
                     <div class="cta-inner text-center rounded">
                         <h2 class="section-heading mb-4">
                             <span class="section-heading-upper">How to cook</span>
-                            <span class="section-heading-lower">@Model.Name</span>
+                            <span class="section-heading-lower">@Model.Recipe.Name</span>
                         </h2>
                         <div class="image" >
                             <img src="~/images/french_onion_soup.jpg" />
@@ -45,26 +45,33 @@
                             <table class="table text-left">
                                 <tbody>
                                     <tr>
+                                        <td>Cuisine</td>
+                                        @foreach (var c in Model.Cuisines)
+                                        {
+                                            <td colspan="2">@c.Type</td>
+                                        }
+                                    </tr>
+                                    <tr>
                                         <td>Description</td>
-                                        <td colspan="2">@Model.Description</td>
+                                        <td colspan="2">@Model.Recipe.Description</td>
                                     </tr>
                                     <tr>
                                         <td>Ingredients</td>
                                         <td>
-                                            @Model.Ingredients
+                                            @Model.Recipe.Ingredients
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>Chef</td>
-                                        <td>@Model.Chef</td>
+                                        <td>@Model.Recipe.Chef</td>
                                     </tr>
                                     <tr>
                                         <td>Preparation Time</td>
-                                        <td>@Model.PreparationTime Minutes</td>
+                                        <td>@Model.Recipe.PreparationTime Minutes</td>
                                     </tr>
                                     <tr>
                                         <td>Cooking Time</td>
-                                        <td>@Model.CookingTime Minutes</td>
+                                        <td>@Model.Recipe.CookingTime Minutes</td>
                                     </tr>
                                 </tbody>
                             </table>

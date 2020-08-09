@@ -1,4 +1,4 @@
-﻿@model Recipe
+﻿@model RecipesProject_JuheeKim.ViewModels.RecipeCuisionViewModel
 
 @{
     ViewBag.Title = "Edit Recipe";
@@ -31,7 +31,7 @@
 
 @if (TempData["message"] != null)
 {
-    <div class="alert alert-suceess mt-1">@TempData["message"]</div>
+    <div class="alert alert-heading mt-1">@TempData["message"]</div>
 }
 
 
@@ -46,32 +46,49 @@
                     <div class="panel panel-success">
                         <div class="panel-body">
                             <form asp-action="EditRecipe" method="post">
-                                <input type="hidden" asp-for="Id" />
+                                <input type="hidden" asp-for="Recipe.Id" />
 
                                 <div class="form-group">
-                                    <label asp-for="Name"></label>
-                                    <div><span asp-validation-for="Name" class="text-danger" /></div>
-                                    <input asp-for="Name" class="form-control" />
+                                    <label asp-for="Recipe.Name"></label>
+                                    <div><span asp-validation-for="Recipe.Name" class="text-danger" /></div>
+                                    <input asp-for="Recipe.Name" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Description"></label>
-                                    <div><span asp-validation-for="Description" class="text-danger" /></div>
-                                    <input asp-for="Description" class="form-control" />
+                                    <label asp-for="Recipe.CuisineId"></label>
+                                    <select asp-for="Recipe.CuisineId">
+                                        @if (!Model.Cuisines.Any())
+                                        {
+                                            <option value="0">Please select</option>
+                                        }
+                                        else 
+                                        {
+                                    <option value="Recipe.CuisineId">Please select</option>
+                                        }
+                                        @foreach (var c in Model.Cuisines)
+                                        {
+                                            <option value="@c.CuisineId">@c.Type</option>
+                                        }
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Ingredients"></label>
-                                    <div><span asp-validation-for="Ingredients" class="text-danger" /></div>
-                                    <input asp-for="Ingredients" class="form-control" />
+                                    <label asp-for="Recipe.Description"></label>
+                                    <div><span asp-validation-for="Recipe.Description" class="text-danger" /></div>
+                                    <input asp-for="Recipe.Description" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="PreparationTime"></label>
-                                    <div><span asp-validation-for="PreparationTime" class="text-danger" /></div>
-                                    <input asp-for="PreparationTime" class="form-control" />
+                                    <label asp-for="Recipe.Ingredients"></label>
+                                    <div><span asp-validation-for="Recipe.Ingredients" class="text-danger" /></div>
+                                    <input asp-for="Recipe.Ingredients" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="CookingTime"></label>
-                                    <div><span asp-validation-for="CookingTime" class="text-danger" /></div>
-                                    <input asp-for="CookingTime" class="form-control" />
+                                    <label asp-for="Recipe.PreparationTime"></label>
+                                    <div><span asp-validation-for="Recipe.PreparationTime" class="text-danger" /></div>
+                                    <input asp-for="Recipe.PreparationTime" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Recipe.CookingTime"></label>
+                                    <div><span asp-validation-for="Recipe.CookingTime" class="text-danger" /></div>
+                                    <input asp-for="Recipe.CookingTime" class="form-control" />
                                 </div>
                                 <div class="text-center">
                                     <button class="btn btn-primary" type="submit">Save</button>

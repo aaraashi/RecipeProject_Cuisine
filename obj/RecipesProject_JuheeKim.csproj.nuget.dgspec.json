@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Juhee\\Centennial\\ASP.NET\\RecipesProject_Part1_JuheeKim\\RecipesProject_JuheeKim.csproj": {}
+    "C:\\Users\\Juhee\\Centennial\\ASP.NET\\Project\\RecipesProject_Part1_JuheeKim\\RecipesProject_JuheeKim.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Juhee\\Centennial\\ASP.NET\\RecipesProject_Part1_JuheeKim\\RecipesProject_JuheeKim.csproj": {
+    "C:\\Users\\Juhee\\Centennial\\ASP.NET\\Project\\RecipesProject_Part1_JuheeKim\\RecipesProject_JuheeKim.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Juhee\\Centennial\\ASP.NET\\RecipesProject_Part1_JuheeKim\\RecipesProject_JuheeKim.csproj",
+        "projectUniqueName": "C:\\Users\\Juhee\\Centennial\\ASP.NET\\Project\\RecipesProject_Part1_JuheeKim\\RecipesProject_JuheeKim.csproj",
         "projectName": "RecipesProject_JuheeKim",
-        "projectPath": "C:\\Users\\Juhee\\Centennial\\ASP.NET\\RecipesProject_Part1_JuheeKim\\RecipesProject_JuheeKim.csproj",
+        "projectPath": "C:\\Users\\Juhee\\Centennial\\ASP.NET\\Project\\RecipesProject_Part1_JuheeKim\\RecipesProject_JuheeKim.csproj",
         "packagesPath": "C:\\Users\\Juhee\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Juhee\\Centennial\\ASP.NET\\RecipesProject_Part1_JuheeKim\\obj\\",
+        "outputPath": "C:\\Users\\Juhee\\Centennial\\ASP.NET\\Project\\RecipesProject_Part1_JuheeKim\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -16,6 +16,7 @@ namespace RecipesProject_JuheeKim.Models
         }
 
         public IQueryable<Recipe> Recipes => context.Recipes;
+        public IQueryable<Cuisine> Cuisines => context.Cuisines;
 
         public void SaveRecipe(Recipe recipe)
         {
@@ -30,6 +31,7 @@ namespace RecipesProject_JuheeKim.Models
 
                 if (recipeEntry != null)
                 {
+                    recipeEntry.CuisineId = recipe.CuisineId;
                     recipeEntry.Name = recipe.Name;
                     recipeEntry.Description = recipe.Description;
                     recipeEntry.Ingredients = recipe.Ingredients;

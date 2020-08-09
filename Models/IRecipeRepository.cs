@@ -8,6 +8,7 @@ namespace RecipesProject_JuheeKim.Models
     public interface IRecipeRepository
     {
         IQueryable<Recipe> Recipes { get;  }
+        IQueryable<Cuisine> Cuisines { get; }
 
         void SaveRecipe(Recipe recipe);
 

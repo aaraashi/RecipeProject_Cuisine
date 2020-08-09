@@ -7,6 +7,7 @@ namespace RecipesProject_JuheeKim.Models
 {
     public class Cuisine
     {
-        public string type { get; set; }
+        public int CuisineId { get; set; }
+        public string Type { get; set; }
     }
 }

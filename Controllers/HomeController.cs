@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using RecipesProject_JuheeKim.Models;
+using RecipesProject_JuheeKim.ViewModels;
 
 namespace RecipesProject_JuheeKim.Controllers
 {
@@ -49,9 +50,18 @@ namespace RecipesProject_JuheeKim.Controllers
         public ViewResult ViewRecipe(int id)
         {
             var recipe = repository.Recipes
-                        .SingleOrDefault(r => r.Id == id);
+            .SingleOrDefault(r => r.Id == id);
 
-            return View(recipe);
+            var cuisines = repository.Cuisines.Where(c => c.CuisineId == recipe.CuisineId);
+
+            var viewModel = new RecipeCuisionViewModel
+            {
+                Recipe = recipe,
+                Cuisines = cuisines
+            };
+
+
+            return View(viewModel);
 
         }
 
@@ -70,16 +80,33 @@ namespace RecipesProject_JuheeKim.Controllers
 
         [HttpGet]
         public ViewResult EditRecipe(int recipeId)
-            => View(repository.Recipes
-                    .FirstOrDefault(p => p.Id == recipeId));
+        {
+            var cuisines = repository.Cuisines.ToList();
+
+            var viewModel = new RecipeCuisionViewModel
+            {
+                Recipe = repository.Recipes
+                    .FirstOrDefault(p => p.Id == recipeId),
+                Cuisines = cuisines
+            };
+            
+            return View(viewModel);
+        }
+        
 
         [HttpPost]
         public IActionResult EditRecipe(Recipe recipe)
-        {
+        {           
             if (ModelState.IsValid)
             {
                 repository.SaveRecipe(recipe);
                 //return View("Index", repository.Products);
+
+                var viewModel = new RecipeCuisionViewModel
+                {
+                    Recipe = recipe
+                };
+
                 TempData["message"] = $"{recipe.Name} was saved!";
                 return RedirectToAction("RecipeList");
             }
@@ -90,7 +117,18 @@ namespace RecipesProject_JuheeKim.Controllers
             }
         }
 
-        public ViewResult CreateRecipe() => View("EditRecipe", new Recipe());
+        public ViewResult CreateRecipe()
+        {
+            var cuisines = repository.Cuisines.ToList();
+
+            var viewModel = new RecipeCuisionViewModel
+            {
+                Recipe = new Recipe(),
+                Cuisines = cuisines
+            };
+
+            return View("EditRecipe", viewModel);
+        }
 
         [HttpPost]
         public IActionResult DeleteRecipe(int recipeId)

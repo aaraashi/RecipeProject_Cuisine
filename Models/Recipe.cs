@@ -12,7 +12,7 @@ namespace RecipesProject_JuheeKim.Models
     public class Recipe
     {
         public int Id { get; set; } = 0;
-        //public Cuisine cuisine { get; set; }
+        public int CuisineId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Ingredients { get; set; }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4MnNCho6NRNodaS1JtNdKEH8zJQFSHRBbtKBNnUMZdl6aqmyV89GHWsg13bjZKVkqHN9t78/bLj36tVzpx+o/w==",
+  "dgSpecHash": "5l11LZh9tmWEXwMLAYNs7c2rxbzTtuS6iVZX/nJO2UwtJSUwu/K6vA6aNmDMymv41STj4jzaSJU6MkUm9Qbipg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Juhee\\Centennial\\ASP.NET\\RecipesProject_Part1_JuheeKim\\RecipesProject_JuheeKim.csproj",
+  "projectFilePath": "C:\\Users\\Juhee\\Centennial\\ASP.NET\\Project\\RecipesProject_Part1_JuheeKim\\RecipesProject_JuheeKim.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore\\2.1.1\\microsoft.aspnetcore.2.1.1.nupkg.sha512",
