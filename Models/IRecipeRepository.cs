@@ -14,5 +14,9 @@ namespace RecipesProject_JuheeKim.Models
 
         Recipe DeleteRecipe(int recipeId);
 
+        void SaveCuisine(Cuisine cuisine);
+
+        Cuisine DeleteCuisine(int cuisineId);
+
     }
 }

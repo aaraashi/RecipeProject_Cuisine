@@ -78,71 +78,72 @@ namespace RecipesProject_JuheeKim.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ViewResult EditRecipe(int recipeId)
-        {
-            var cuisines = repository.Cuisines.ToList();
+        //[HttpGet]
+        //public ViewResult EditRecipe(int recipeId)
+        //{
+        //    var cuisines = repository.Cuisines.ToList();
 
-            var viewModel = new RecipeCuisionViewModel
-            {
-                Recipe = repository.Recipes
-                    .FirstOrDefault(p => p.Id == recipeId),
-                Cuisines = cuisines
-            };
-            
-            return View(viewModel);
-        }
-        
+        //    var viewModel = new RecipeCuisionViewModel
+        //    {
+        //        Recipe = repository.Recipes
+        //            .FirstOrDefault(p => p.Id == recipeId),
+        //        Cuisines = cuisines
+        //    };
 
-        [HttpPost]
-        public IActionResult EditRecipe(Recipe recipe)
-        {           
-            if (ModelState.IsValid)
-            {
-                repository.SaveRecipe(recipe);
-                //return View("Index", repository.Products);
+        //    return View(viewModel);
+        //}
 
-                var viewModel = new RecipeCuisionViewModel
-                {
-                    Recipe = recipe
-                };
 
-                TempData["message"] = $"{recipe.Name} was saved!";
-                return RedirectToAction("RecipeList");
-            }
-            else
-            {
-                // stay in the same page and show the input
-                return View(recipe);
-            }
-        }
+        //    [HttpPost]
+        //    public IActionResult EditRecipe(Recipe recipe)
+        //    {           
+        //        if (ModelState.IsValid)
+        //        {
+        //            repository.SaveRecipe(recipe);
+        //            //return View("Index", repository.Products);
 
-        public ViewResult CreateRecipe()
-        {
-            var cuisines = repository.Cuisines.ToList();
+        //            var viewModel = new RecipeCuisionViewModel
+        //            {
+        //                Recipe = recipe
+        //            };
 
-            var viewModel = new RecipeCuisionViewModel
-            {
-                Recipe = new Recipe(),
-                Cuisines = cuisines
-            };
+        //            TempData["message"] = $"{recipe.Name} was saved!";
+        //            return RedirectToAction("RecipeList");
+        //        }
+        //        else
+        //        {
+        //            // stay in the same page and show the input
+        //            return View(recipe);
+        //        }
+        //    }
 
-            return View("EditRecipe", viewModel);
-        }
+        //    public ViewResult CreateRecipe()
+        //    {
+        //        var cuisines = repository.Cuisines.ToList();
 
-        [HttpPost]
-        public IActionResult DeleteRecipe(int recipeId)
-        {
-            Recipe deletedRecipe = repository.DeleteRecipe(recipeId);
+        //        var viewModel = new RecipeCuisionViewModel
+        //        {
+        //            Recipe = new Recipe(),
+        //            Cuisines = cuisines
+        //        };
 
-            if (deletedRecipe != null)
-            {
-                TempData["message"] = $"{deletedRecipe.Name} was deleted!";
+        //        return View("EditRecipe", viewModel);
+        //    }
 
-            }
-            return RedirectToAction("RecipeList");
-        }
+        //    [HttpPost]
+        //    public IActionResult DeleteRecipe(int recipeId)
+        //    {
+        //        Recipe deletedRecipe = repository.DeleteRecipe(recipeId);
+
+        //        if (deletedRecipe != null)
+        //        {
+        //            TempData["message"] = $"{deletedRecipe.Name} was deleted!";
+
+        //        }
+        //        return RedirectToAction("RecipeList");
+        //    }
+        //}
+
+
     }
-
-
 }

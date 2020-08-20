@@ -56,5 +56,41 @@ namespace RecipesProject_JuheeKim.Models
             return recipeEntry;
         }
 
+        public void SaveCuisine(Cuisine cuisine)
+        {
+            if (cuisine.CuisineId == 0)
+            {
+                context.Cuisines.Add(cuisine);
+            }
+            else
+            {
+                Cuisine cuisineEntry = context.Cuisines
+                    .FirstOrDefault(r => r.CuisineId == cuisine.CuisineId);
+
+                if (cuisineEntry != null)
+                {
+                    cuisineEntry.CuisineId = cuisine.CuisineId;
+                    cuisineEntry.Type = cuisine.Type;
+                }
+            }
+
+            context.SaveChanges();
+        }
+
+        public Cuisine DeleteCuisine(int cuisineId)
+        {
+            Cuisine cuisineEntry = context.Cuisines
+                   .FirstOrDefault(p => p.CuisineId == cuisineId);
+
+            if (cuisineEntry != null)
+            {
+                context.Cuisines.Remove(cuisineEntry);
+                context.SaveChanges();
+            }
+
+            return cuisineEntry;
+        }
+
     }
+    
 }

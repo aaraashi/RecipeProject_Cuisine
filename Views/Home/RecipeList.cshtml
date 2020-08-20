@@ -20,9 +20,9 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item px-lg-4">
+                @*<li class="nav-item px-lg-4">
                     <a class="nav-link text-uppercase text-expanded" asp-action="CreateRecipe">Add Recipe</a>
-                </li>
+                </li>*@
             </ul>
         </div>
     </div>
@@ -45,15 +45,16 @@
                                 <ul class="list-group text-center list-unstyled">
                                     <li class="recipe-list"><a asp-action="ViewRecipe">@Html.ActionLink(r.Name, "ViewRecipe", "Recipes", new { id = r.Id }, null)</a></li>
                                     @*<li class="recipe-list"><a asp-action="ViewRecipe">@r.Name</a><li>*@
-                                    <li>
-                                        <form asp-action="DeleteRecipe" method="post">
-                                            <a class="review-link" asp-action="ReviewRecipe">Review</a>
-                                            <a asp-action="EditRecipe" class="edit-link" asp-route-recipeId="@r.Id">Edit</a>
+                                <li>
+                                    <a class="review-link" asp-action="ReviewRecipe">Review</a>
+                                    @*<form asp-action="DeleteRecipe" method="post">
 
-                                            <input type="hidden" value="@r.Id" name="recipeId" />
-                                            <button type="submit" class="delete-link">Delete</button>
-                                        </form>
-                                    </li>
+                                        <a asp-action="EditRecipe" class="edit-link" asp-route-recipeId="@r.Id">Edit</a>
+
+                                        <input type="hidden" value="@r.Id" name="recipeId" />
+                                        <button type="submit" class="delete-link">Delete</button>
+                                    </form>*@
+                                </li>
                                 </ul>
                             </div>
                         }
@@ -65,8 +66,8 @@
 </section>
 
 
-<div class="text-center">
+@*<div class="text-center">
     <a asp-action="CreateRecipe" class="btn btn-primary">Add Recipe</a>
 </div>
 <br />
-<br />
+<br />*@

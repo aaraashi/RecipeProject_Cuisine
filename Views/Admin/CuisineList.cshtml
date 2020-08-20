@@ -1,0 +1,52 @@
+﻿
+@model IEnumerable<Cuisine>
+
+@{
+    ViewBag.Title = "Cuisine List";
+}
+
+@if (TempData["message"] != null)
+{
+    <div class="alert alert-suceess mt-1">@TempData["message"]</div>
+}
+
+<div>
+    <a asp-action="RecipeList" class="btn btn-dark m-3">Recipe</a>
+    <a asp-action="CuisineList" class="btn btn-primary">Cuisine</a>
+</div>
+
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="product-item-title d-flex w-100 mt-5 justify-content-xl-center">
+                    <div class="recipe-box rounded">
+                        @foreach (var c in Model)
+                        {
+                            <div class="recipe-box-div">
+                                <ul class="list-group text-center list-unstyled">
+                                    <li class="cuisine-list">@c.Type</li>
+                                    <li>
+                                        <form asp-action="DeleteCuisine" method="post">
+                                            <a asp-action="EditCuisine" class="edit-link" asp-route-cuisineId="@c.CuisineId">Edit</a>
+
+                                            <input type="hidden" value="@c.CuisineId" name="cuisineId" />
+                                            <button type="submit" class="delete-link">Delete</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="text-center">
+    <a asp-action="CreateCuisine" class="btn btn-primary">Add Cuisine</a>
+</div>
+<br />
+<br />

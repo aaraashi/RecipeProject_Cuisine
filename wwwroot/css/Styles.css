@@ -8,7 +8,15 @@
     width: 240px;
     font-family: Lucida Sans;
     font-size: 1.25rem;
-    color: indianred;
+    color: dodgerblue;
+    margin-bottom: 10px;
+}
+
+.cuisine-list {
+    width: 240px;
+    font-family: Lucida Sans;
+    font-size: 1.25rem;
+    color: dodgerblue;
     margin-bottom: 10px;
 }
 

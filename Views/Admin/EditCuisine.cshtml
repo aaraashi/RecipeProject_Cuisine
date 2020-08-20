@@ -1,0 +1,43 @@
+﻿@model RecipesProject_JuheeKim.ViewModels.RecipeCuisionViewModel
+
+@{
+    ViewBag.Title = "Edit Cuisine";
+}
+
+@if (TempData["message"] != null)
+{
+    <div class="alert alert-heading mt-1">@TempData["message"]</div>
+}
+
+
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto box-bg">
+                <div class="box-style text-center rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-medium">Please write Cuisine Information</span>
+                    </h2>
+                    <div class="panel panel-success">
+                        <div class="panel-body">
+                            <form asp-action="EditCuisine" method="post">
+                                <input type="hidden" asp-for="Cuisine.CuisineId" />
+
+                                <div class="form-group">
+                                    <label asp-for="Cuisine.Type"></label>
+                                    <div><span asp-validation-for="Cuisine.Type" class="text-danger" /></div>
+                                    <input asp-for="Cuisine.Type" class="form-control" />
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-primary" type="submit">Save</button>
+                                    <button asp-action="CuisineList" class="btn btn-secondary">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

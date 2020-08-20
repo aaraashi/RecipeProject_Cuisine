@@ -70,3 +70,7 @@ C:\Users\Juhee\Centennial\ASP.NET\Project\RecipesProject_Part1_JuheeKim\obj\Debu
 C:\Users\Juhee\Centennial\ASP.NET\Project\RecipesProject_Part1_JuheeKim\obj\Debug\netcoreapp2.1\RecipesProject_JuheeKim.pdb
 C:\Users\Juhee\Centennial\ASP.NET\Project\RecipesProject_Part1_JuheeKim\obj\Debug\netcoreapp2.1\RecipesProject_JuheeKim.genruntimeconfig.cache
 C:\Users\Juhee\Centennial\ASP.NET\Project\RecipesProject_Part1_JuheeKim\obj\Debug\netcoreapp2.1\RecipesProject_JuheeKim.csproj.CopyComplete
+C:\Users\Juhee\Centennial\ASP.NET\Project\RecipesProject_Part1_JuheeKim\obj\Debug\netcoreapp2.1\Razor\Views\Admin\CuisineList.cshtml.g.cs
+C:\Users\Juhee\Centennial\ASP.NET\Project\RecipesProject_Part1_JuheeKim\obj\Debug\netcoreapp2.1\Razor\Views\Admin\EditCuisine.cshtml.g.cs
+C:\Users\Juhee\Centennial\ASP.NET\Project\RecipesProject_Part1_JuheeKim\obj\Debug\netcoreapp2.1\Razor\Views\Admin\EditRecipe.cshtml.g.cs
+C:\Users\Juhee\Centennial\ASP.NET\Project\RecipesProject_Part1_JuheeKim\obj\Debug\netcoreapp2.1\Razor\Views\Admin\RecipeList.cshtml.g.cs

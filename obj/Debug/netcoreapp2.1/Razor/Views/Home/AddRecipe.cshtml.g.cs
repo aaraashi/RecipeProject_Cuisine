@@ -64,7 +64,7 @@ using RecipesProject_JuheeKim.Models;
             WriteLiteral("\r\n\r\n    <nav class=\"navbar navbar-expand-lg navbar-dark py-lg-4\" id=\"mainNav\">\r\n        <div>");
             EndContext();
             BeginContext(153, 49, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f0ff757b3060483fbe84321dc7ef04f9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b76d5a6e459a4bc0904b911e873ddc78", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -89,7 +89,7 @@ using RecipesProject_JuheeKim.Models;
                         ");
             EndContext();
             BeginContext(559, 132, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "663f164ac9a846d9b913ee9d47d78f97", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e2c7da69a3454b18a316cd73b19d2c37", async() => {
                 BeginContext(627, 60, true);
                 WriteLiteral("\r\n                            Home\r\n                        ");
                 EndContext();
@@ -112,7 +112,7 @@ using RecipesProject_JuheeKim.Models;
             WriteLiteral("\r\n                    </li>\r\n                    <li class=\"nav-item px-lg-4\">\r\n                        ");
             EndContext();
             BeginContext(795, 144, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1dd4cffb40874185a4ed34f984195f27", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb46a61088fe4ce6ad7a59b08a64c6b9", async() => {
                 BeginContext(868, 67, true);
                 WriteLiteral("\r\n                            Recipe List\r\n                        ");
                 EndContext();
@@ -135,7 +135,7 @@ using RecipesProject_JuheeKim.Models;
             WriteLiteral("\r\n                    </li>\r\n                    <li class=\"nav-item active px-lg-4\">\r\n                        ");
             EndContext();
             BeginContext(1050, 125, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c38b216a83ad4a339dbc96a8f49cac5a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "331961f16e244fef947cb6f687bf5955", async() => {
                 BeginContext(1122, 49, true);
                 WriteLiteral("Add Recipe <span class=\"sr-only\">(current)</span>");
                 EndContext();
